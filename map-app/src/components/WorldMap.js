@@ -57,24 +57,25 @@ class WorldMap extends Component {
     })
   }
 
-  componentWillReceiveProps() {
-    console.log('new props?')
-    console.log('this.props', this.props)
-    if(this.props.worldMapData.objects) {
-      console.log('we are in the if statement')
-      this.renderMap()
-    }
-  }
-
-  // componentDidMount() {
-  //   // setTimeout(()=>{
-  //   //   this.renderMap()
-  //   // }, 500)
-  //   console.log("are you remounting?")
+  // componentWillReceiveProps() {
+  //   console.log('new props?')
+  //   console.log('this.props', this.props)
   //   if(this.props.worldMapData.objects) {
+  //     console.log('we are in the if statement')
   //     this.renderMap()
   //   }
   // }
+
+  componentDidMount() {
+    setTimeout(()=>{
+      this.renderMap()
+    }, 500)
+    // console.log('mounting')
+    // if(this.props.worldMapData.objects) {
+    //   console.log("first time")
+    //   this.renderMap()
+    // }
+  }
 
 
   render() {

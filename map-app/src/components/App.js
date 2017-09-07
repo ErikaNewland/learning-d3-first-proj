@@ -15,6 +15,7 @@ class App extends Component {
   }
 
   render() {
+    console.log('app rerendering')
     return (
       <WorldMap/>
     )
